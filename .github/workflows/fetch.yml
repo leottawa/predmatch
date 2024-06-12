@@ -12,8 +12,15 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v2
 
-    - name: Run script
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # Specify the Node.js version you want to use
+
+    - name: Install dependencies
       run: |
-        echo "Function executed at $(date)"
-        # Add your function logic here
-        curl -s https://api.example.com/data
+        npm install  # If you have dependencies listed in package.json
+
+    - name: Run fetch.js
+      run: |
+        node fetch.js
