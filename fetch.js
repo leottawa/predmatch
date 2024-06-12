@@ -9,5 +9,3 @@ function updateContent() {
 // Run the function
 updateContent();
 
-// Export the function for testing
-module.exports = updateContent;
