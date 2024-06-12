@@ -3,6 +3,7 @@ name: Run Scheduled Function
 on:
   schedule:
     - cron: '* * * * *'  # This runs every minute
+  workflow_dispatch:
 
 jobs:
   run-function:
@@ -10,12 +11,12 @@ jobs:
 
     steps:
     - name: Check out repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v3
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Specify the Node.js version you want to use
+        node-version: '20'  # Specify the Node.js version you want to use
 
     - name: Install dependencies
       run: |
