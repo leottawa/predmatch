@@ -1,0 +1,19 @@
+name: Run Scheduled Function
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'  # This runs every 10 minutes
+
+jobs:
+  run-function:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Run script
+      run: |
+        echo "Function executed at $(date)"
+        # Add your function logic here
+        curl -s https://api.example.com/data
