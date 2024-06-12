@@ -1,20 +1,13 @@
-const fetch = require('node-fetch');
 
 function updateContent() {
+    const contentDiv = document.getElementById('content');
     const now = new Date().toLocaleTimeString();
+    contentDiv.innerHTML = `Function executed at ${now}`;
     console.log(`Function executed at ${now}`);
-    // Example: Fetch data from an API
-    fetch('https://api.example.com/data')
-        .then(response => response.json())
-        .then(data => console.log('Data fetched:', data))
-        .catch(error => console.error('Error fetching data:', error));
 }
 
-// Run the function immediately
+// Run the function
 updateContent();
 
-// Set an interval to run the function every 5 seconds for 1 minute
-const intervalId = setInterval(updateContent, 5000);
-
-// Stop the interval after 1 minute to avoid overlapping executions
-setTimeout(() => clearInterval(intervalId), 60000);
+// Export the function for testing
+module.exports = updateContent;
