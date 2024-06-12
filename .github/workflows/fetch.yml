@@ -2,7 +2,7 @@ name: Run Scheduled Function
 
 on:
   schedule:
-    - cron: '*/10 * * * *'  # This runs every 10 minutes
+    - cron: '* * * * *'  # This runs every minute
 
 jobs:
   run-function:
@@ -19,7 +19,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        npm install  # If you have dependencies listed in package.json
+        npm init -y
+        npm install node-fetch
 
     - name: Run fetch.js
       run: |
