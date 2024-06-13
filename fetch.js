@@ -6,7 +6,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     const messageElement = document.getElementById('message');
 
     // Example validation logic
-    if (username === 'evalebel' && password === 'jeveuxfairelesexaleo') {
+    if (username === 'leottawa' && password === 'noukette') {
         messageElement.style.color = 'green';
         messageElement.textContent = 'biennnnnnnnnn';
         // Redirect to a new page after a short delay
