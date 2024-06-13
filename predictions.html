@@ -4,23 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Football Leagues</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="predictions.css">
 </head>
 <body>
   <nav>
     <ul>
-      <li><a href="#" onclick="showHeader('england')">England</a></li>
-      <li><a href="#" onclick="showHeader('france')">France</a></li>
-      <li><a href="#" onclick="showHeader('germany')">Germany</a></li>
-      <li><a href="#" onclick="showHeader('italy')">Italy</a></li>
-      <li><a href="#" onclick="showHeader('spain')">Spain</a></li>
+      <li><a href="#" onclick="showLeague('england')">England</a></li>
+      <li><a href="#" onclick="showLeague('france')">France</a></li>
+      <li><a href="#" onclick="showLeague('germany')">Germany</a></li>
+      <li><a href="#" onclick="showLeague('italy')">Italy</a></li>
+      <li><a href="#" onclick="showLeague('spain')">Spain</a></li>
     </ul>
   </nav>
   
   <header id="header">
     <h1>Welcome to Football Leagues</h1>
   </header>
+  
+  <div id="fixtures-container" class="hidden">
+    <h2 id="league-title">Fixtures</h2>
+    <div id="fixtures-list"></div>
+  </div>
 
-  <script src="scripts.js"></script>
+  <script src="predictions.js"></script>
 </body>
 </html>
