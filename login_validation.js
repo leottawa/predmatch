@@ -11,7 +11,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         messageElement.textContent = 'biennnnnnnnnn';
         // Redirect to a new page after a short delay
         setTimeout(() => {
-            window.location.href = 'jaimeeva.html'; // Replace 'welcome.html' with your actual page
+            window.location.href = 'predictions.html'; // Replace 'welcome.html' with your actual page
         }, 1000);
     } else {
         messageElement.style.color = 'red';
